@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Stack Dev">
+	<meta name="copyright" content="Stack Dev">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>Lizi＇Card</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="script.js">
+	<!-- aplayer播放器组件 -->
+	<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+	<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script> -->
+	<!-- require MetingJS -->
+	<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+	<link rel="stylesheet" href="./css/MyukiGCard.css">
+	<script src="./js/MyukiGCard.js"></script>
+	<script>
+		//简单用法
+		//window.MyNavCard = $MGC();
+		//高级用法
+		window.addEventListener("DOMContentLoaded", function () {
+			window.MyNavCard = $MGC({
+				icon: "img/avatar.jpg",
+				/*
+				icon: 可以是头像、网站logo等
+				*/
+				name: "溧子",
+				/*
+				name: 可是是名字、网站名称等
+				*/
+				info: "遇见是一种福气，不遇见也是。",
+				/*
+				info: 个性签名、网站口号、信息等，为空或者不设置将不显示
+				默认值: 空
+				*/
+				z_index: 9999,
+				/*
+				不用解释，默认值为9999
+				*/
+				blur: "#write",
+				/*
+				blur: 想要模糊化处理的页面元素，取值可以是.className（类名）、#idName（id属性值）、tagName（标签名）
+				*/
+				lang: "zh-CN",
+				/*
+				lang: 语言设置，目前和关闭按钮的文本有关
+				默认值: zh-CN
+				可选值: zh-CN,zh-TW,en-US
+				如果不提供或者提供的不在可选值内，将使用默认值或者使用html页面的lang属性
+				*/
+				mini: true,
+				/*
+				mini: 迷你按钮，用于重新打开MyukiGCard（在页面底部中间位置）
+				默认值: true
+				*/
+				darkmode: 2,
+				/*
+				darkmode: 夜间模式
+				默认值: 1
+				可选值: 0、1、2、3
+				0: 禁用夜间模式
+				1: 跟随系统（如果系统支持夜间模式）
+				2: 根据时间，下午6时～上午6时打开夜间模式
+				3: 常开夜间模式
+				*/
+				maxWidth: "480px",
+				/*
+				maxWidth: MyukiGCard的最大宽度
+				默认值: 480px
+				*/
+				fontFamily: "",
+				/*
+				fontFamily: 字体，为空或不设置将使用默认字体
+				*/
+				links: [{
+					"title": "博客",
+					"url": "https://Lizi-nb.cn",
+					"type": "primary",
+
+				}, {
+					"title": "努力开发中……",
+					"url": "#",
+				}],
+				/*
+				导航链接列表
+				title: 链接的标题
+				url: 链接地址
+				
+				type: 链接按钮的类型，包括：
+				default | primary | secondary | success | danger | waring | info | light | dark | link
+				如果不提供type，默认为dafault
+				
+				target: 在何处打开链接，包括：
+				_blank（新窗口）| _self(默认) | _parent(父框架) | _top(整个窗口) | framename(指定的框架)
+				如果不提供target，将使用默认
+				*/
+			});
+		});
+	</script>
+	<style>
+		@keyframes colorfulAnimation {
+			0% {
+				color: red;
+			}
+
+			20% {
+				color: orange;
+			}
+
+			40% {
+				color: yellow;
+			}
+
+			60% {
+				color: green;
+			}
+
+			80% {
+				color: blue;
+			}
+
+			100% {
+				color: purple;
+			}
+		}
+
+		#colorful-text {
+			animation: colorfulAnimation 2s linear infinite;
+		}
+	</style>
+</head>
+
+<body class='typora-export'>
+	<div class='typora-export-content'>
+		<div id='write' class=''>
+			<h1 id='myukigcard'><span><img style="width: 50px;height: 50px;border-radius: 50%;margin-right: 10px;
+    margin-top: -6px;box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)"
+						src="img/微信图片_20230704150741.jpg" alt="Personal portrait">About Me</span></h1>
+			<blockquote>
+				<p><span>2001-2-2</span></p>
+			</blockquote>
+			<p><span>⛄️All at sea：希望能成为一个有趣的人。希望能创造出可以成为他人回忆的事物。</span></p>
+			<!-- 个人头像 -->
+			<h2></h2>
+			<span id="colorful-text"
+				style="padding: 0px 20px;border-left: 10px solid #ed515191;background-color: rgba(208, 208, 208, 0);font-size: 19px;line-height: 30px;color: cornflowerblue;font-weight: bold;margin: 5px 0;">
+				今天你摸鱼了吗？</span>
+			<div style="width: 30%;margin: 0 auto;box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)">
+				<img onclick="zoom(this)" src="https://api.vvhan.com/api/moyu" alt="MoYu"
+					style="display: block;margin: 0 auto;max-width: 100%;max-height: 100%;">
+			</div>
+			<h2></h2>
+			<blockquote>
+				<del>22 岁，已毕业。热爱旅游、徒步。</del> 成长 ing。<br>
+				<span>在下年满十八，遵纪守法，爱国爱家，不碰烟酒，善养鸡鸭，多素少荤，爱吃西瓜。</span>
+			</blockquote>
+			<p>见字如面，很高兴能够在此与你相遇。</p>
+			<p>我喜欢夏日冰凉的西瓜、在悠闲的午后睡觉，以及像哆啦 A梦一样可以承载想象的动漫与科幻故事，还有可爱又有趣的女孩子，啊不对，是一切有趣的事物。我也想希望自己可以成为一个有趣的人，并创造出可以成为他人回忆的事物。
+			</p>
+			<blockquote>
+				<p>但凡人能想象到的事物，必定有人能将它实现。<br>——儒勒·凡尔纳</p>
+			</blockquote>
+			<p>简而言之就是可以不用上班，自己在家做觉得有趣的事情的人！（想必大家也是）
+			</p>
+			<details>
+				<summary>列表</summary>
+				<ul>
+					<li>爱好：科幻电影、简单绘画、旅游、以及一切有趣的东西、<del>摸鱼</del></li>
+					<li>喜欢：西瓜、睡觉、纸片人（可爱的女孩子）、史迪仔</li>
+					<li>讨厌：肥肉（啊，我是指吃的那种）,夹子</li>
+					<li>运动：游泳、徒步、爬山</li>
+					<li>目标：有车有房有钱人</li>
+				</ul>
+				<p>
+					<img src="https://cdn.yunyoujun.cn/img/meme/no-work.jpg" alt="工作就输了" loading="lazy">
+				</p>
+				<p><del>以及种花种草，养狗养猫，孤独终老。</del></p>
+			</details>
+			<details>
+				<summary>此生想要完成的事情</summary>
+				<blockquote>
+					<p>想想还是可以的</p>
+				</blockquote>
+				<ul>
+					<li><input disabled="" type="checkbox">带喜欢的女孩子各地旅游</li>
+					<li><input disabled="" type="checkbox"> 在乡村老家有一栋按照自己想法建造的房子</li>
+					<li><input disabled="" type="checkbox" checked=""> 成为一个自己不讨厌的、有趣的人</li>
+					<li><input type="checkbox" disabled="" checked="">买一辆车</li>
+					<li><input type="checkbox" disabled="">全部各地旅游（进行中）</li>
+				</ul>
+			</details>
+			<details>
+				<summary>个人喜好</summary>
+				<ul>
+					<li>网易云音乐: <a target="_blank" rel="noopener"
+							href="https://music.163.com/#/user/home?id=351839308">溧子Ovo</a></li>
+					<li>抖音:<a target="_blank" rel="noopener"
+							href="https://www.douyin.com/user/MS4wLjABAAAAV24B6yceptwlQuYBtbbfJxo3bNQYEuR7XCqOUVMjOuA">溧子</a>
+					</li>
+				</ul>
+			</details>
+			<blockquote>
+				<p>我对普通的人类没有兴趣。你们之中如果有外星人、未来人、异世界来客或者超能力者以及喜爱一切有趣事物之人的话就来找我，完毕。<br>——「凉宫春日」</p>
+			</blockquote>
+		</div>
+	</div>
+	<meting-js server="netease" type="playlist" id="4888070086" theme="#ecb0c1" order="random" fixed="true"></meting-js>
+	<script>
+		document.body.style.overflow = 'hidden';
+		//放大图片操作
+		function zoom(img) {
+			document.body.style.overflow = 'hidden';
+			document.getElementsByClassName('myuki-gcard_mini shown')[0].style.display = 'none'
+			//创建div显示背景
+			var zoomDiv = document.createElement("div");
+			zoomDiv.style.position = "fixed";
+			zoomDiv.style.top = "0";
+			zoomDiv.style.left = "0";
+			zoomDiv.style.width = "100%";
+			zoomDiv.style.height = "100%";
+			zoomDiv.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+			zoomDiv.style.zIndex = "999";
+			zoomDiv.style.display = "flex";
+			zoomDiv.style.justifyContent = "center";
+			zoomDiv.style.alignItems = "center";
+			//创建img放需要放大的img
+			var zoomImg = document.createElement("img");
+			zoomImg.src = img.src;
+			zoomImg.style.maxWidth = "90%";
+			zoomImg.style.maxHeight = "90%";
+
+			zoomDiv.appendChild(zoomImg);
+
+			document.body.appendChild(zoomDiv);
+
+			//点击div时移除该div
+			zoomDiv.onclick = function () {
+				document.body.style.overflow = '';
+				document.body.removeChild(zoomDiv);
+				document.getElementsByClassName('myuki-gcard_mini shown')[0].style.display = 'block'
+			}
+		}
+	</script>
+</body>
+
+</html>
