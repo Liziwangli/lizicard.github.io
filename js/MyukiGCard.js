@@ -223,12 +223,7 @@
 		},
 
 		help: function () {
-			console.info("⛄️欢迎使用MyukiGCard:", {
-				"author": "Stack Dev",
-				"github": "https://github.com/Uyukisan",
-				"usage": "https://github.com/Uyukisan/MyukiGCard",
-				"preview": "https://uyukisan.github.io/MyukiGCard/"
-			});
+			console.info("⛄️欢迎来到Lizi'Card");
 			return {
 				"author": "Stack Dev",
 				"github": "https://github.com/Uyukisan",
