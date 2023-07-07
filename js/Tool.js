@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", function () {
         */
         links: [{
             "title": "个人博客",
-            "url": "https://Lizi-nb.cn",
+            "url": "https://liziwangli.github.io/",
             "type": "primary",
 
         }, {
