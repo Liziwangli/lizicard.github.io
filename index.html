@@ -138,6 +138,13 @@
 	<meting-js server="netease" type="playlist" id="4888070086" theme="#ecb0c1" order="random" fixed="true"></meting-js>
 	<script>
 		document.body.style.overflow = 'hidden';
+		// 检查用户是否已经登录
+		var loggedIn = sessionStorage.getItem('loggedIn');
+
+		// 如果未登录，重定向到登录页
+		if (!loggedIn) {
+			window.location.href = 'login.html';
+		}
 	</script>
 </body>
 
