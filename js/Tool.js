@@ -61,6 +61,11 @@ window.addEventListener("DOMContentLoaded", function () {
             "url": "https://liziwangli.github.io/",
             "type": "primary",
 
+        }, {
+            "title": "ChatGPT",
+            "url": "https://www.lizi-gpt.love",
+            "type": "primary",
+            "target": "_blank"
         }],
         /*
         导航链接列表
