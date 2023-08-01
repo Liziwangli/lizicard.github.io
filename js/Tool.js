@@ -61,9 +61,6 @@ window.addEventListener("DOMContentLoaded", function () {
             "url": "https://liziwangli.github.io/",
             "type": "primary",
 
-        }, {
-            "title": "努力开发中……",
-            "url": "",
         }],
         /*
         导航链接列表
